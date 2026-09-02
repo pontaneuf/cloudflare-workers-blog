@@ -6,45 +6,563 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="ja">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
 		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+
+		<main class="container">
+			<!-- Hero Profile Header Card -->
+			<section class="profile-card animate-fade-in">
+				<div class="card-cover">
+					<div class="cover-pattern"></div>
+				</div>
+
+				<div class="profile-header-content">
+					<div class="avatar-wrapper">
+						<div class="avatar">
+							<span class="avatar-emoji">🎵</span>
+						</div>
+						<div class="status-badge">
+							<span class="status-dot"></span>
+							<span class="status-text">Creating Music</span>
+						</div>
+					</div>
+
+					<div class="profile-titles">
+						<h1 class="name">pontaneuf</h1>
+						<p class="handle">@pontaneuf</p>
+					</div>
+
+					<div class="bio-box">
+						<p class="bio-text">
+							音楽を楽しもう! 🎵<br />
+							音楽、アニメ、ゲーム、ガジェットなどをつぶやいていきます✨<br />
+							ここでは<span class="highlight">"あえて"日本語で</span>
+						</p>
+					</div>
+
+					<!-- Interest Tags / Hashtags -->
+					<div class="hashtags-container">
+						<a href="https://x.com/hashtag/music" target="_blank" rel="noopener noreferrer" class="tag tag-music">
+							<span class="tag-hash">#</span>music
+						</a>
+						<a href="https://x.com/hashtag/jpop" target="_blank" rel="noopener noreferrer" class="tag tag-jpop">
+							<span class="tag-hash">#</span>jpop
+						</a>
+						<a href="https://x.com/hashtag/games" target="_blank" rel="noopener noreferrer" class="tag tag-games">
+							<span class="tag-hash">#</span>games
+						</a>
+						<a href="https://x.com/hashtag/gadget" target="_blank" rel="noopener noreferrer" class="tag tag-gadget">
+							<span class="tag-hash">#</span>gadget
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- Primary Action Links Grid -->
+			<section class="links-section animate-fade-in delay-1">
+				<h2 class="section-title">
+					<span class="title-icon">🔗</span>
+					<span>Official Links</span>
+				</h2>
+
+				<div class="link-cards-grid">
+					<!-- X (Twitter) Card -->
+					<a href="https://x.com/pontaneuf" target="_blank" rel="noopener noreferrer" class="action-card x-card">
+						<div class="card-icon-bg x-icon-bg">
+							<svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
+								<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+							</svg>
+						</div>
+						<div class="card-info">
+							<div class="card-header-line">
+								<span class="card-title">X (Twitter)</span>
+								<span class="arrow-icon">↗</span>
+							</div>
+							<p class="card-desc">日常のつぶやき、音楽、ゲーム、ガジェットの最新トピックを発信中</p>
+							<span class="card-subtext">@pontaneuf をフォロー</span>
+						</div>
+					</a>
+
+					<!-- Suno Card -->
+					<a href="https://suno.com/@pontaneuf" target="_blank" rel="noopener noreferrer" class="action-card suno-card">
+						<div class="card-icon-bg suno-icon-bg">
+							<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M9 18V5l12-2v13"></path>
+								<circle cx="6" cy="18" r="3"></circle>
+								<circle cx="18" cy="16" r="3"></circle>
+							</svg>
+						</div>
+						<div class="card-info">
+							<div class="card-header-line">
+								<span class="card-title">Suno AI Music</span>
+								<span class="arrow-icon">↗</span>
+							</div>
+							<p class="card-desc">AIを活用して制作したオリジナルの楽曲作品を公開中</p>
+							<span class="card-subtext">suno.com/@pontaneuf で聴く</span>
+						</div>
+					</a>
+				</div>
+			</section>
+
+			<!-- Topics & Interests Section -->
+			<section class="interests-section animate-fade-in delay-2">
+				<h2 class="section-title">
+					<span class="title-icon">✨</span>
+					<span>Interests & Activities</span>
+				</h2>
+
+				<div class="interests-grid">
+					<div class="interest-box music-box">
+						<div class="box-header">
+							<span class="box-icon">🎧</span>
+							<h3>Music & J-POP</h3>
+						</div>
+						<p>J-POPを中心に様々な音楽を楽しんでいます。Sunoを活用したAI楽曲作成やサウンドメイキングにも没頭中。</p>
+					</div>
+
+					<div class="interest-box anime-box">
+						<div class="box-header">
+							<span class="box-icon">🎬</span>
+							<h3>Anime & Stories</h3>
+						</div>
+						<p>アニメ鑑賞や印象的な作品のストーリー、音楽の魅力に触れるのが好きです。</p>
+					</div>
+
+					<div class="interest-box games-box">
+						<div class="box-header">
+							<span class="box-icon">🎮</span>
+							<h3>Games</h3>
+						</div>
+						<p>カジュアルなゲームから注目の新作まで、ワクワクするゲーム体験を日々楽しんでいます。</p>
+					</div>
+
+					<div class="interest-box gadget-box">
+						<div class="box-header">
+							<span class="box-icon">📱</span>
+							<h3>Gadget & Tech</h3>
+						</div>
+						<p>最新のスマホやデスク環境周辺のガジェット、便利なテクノロジーアイテムに興味津々です。</p>
+					</div>
+				</div>
+			</section>
 		</main>
+
 		<Footer />
 	</body>
 </html>
+
+<style>
+	.container {
+		max-width: 680px;
+		margin: 0 auto;
+		padding: 1.5rem 1rem 3rem 1rem;
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	/* Hero Profile Card */
+	.profile-card {
+		background: rgba(255, 255, 255, 0.85);
+		backdrop-filter: blur(20px);
+		-webkit-backdrop-filter: blur(20px);
+		border: 1px solid rgba(255, 255, 255, 0.8);
+		border-radius: 28px;
+		box-shadow: 0 10px 30px -5px rgba(99, 102, 241, 0.12), 0 4px 12px -2px rgba(0, 0, 0, 0.04);
+		overflow: hidden;
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+	}
+
+	.card-cover {
+		height: 110px;
+		background: linear-gradient(135deg, #a5b4fc 0%, #f472b6 50%, #fb923c 100%);
+		position: relative;
+	}
+
+	.cover-pattern {
+		position: absolute;
+		inset: 0;
+		background-image: radial-gradient(rgba(255, 255, 255, 0.3) 1px, transparent 1px);
+		background-size: 16px 16px;
+	}
+
+	.profile-header-content {
+		padding: 0 1.5rem 1.8rem 1.5rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		position: relative;
+	}
+
+	.avatar-wrapper {
+		margin-top: -50px;
+		position: relative;
+		margin-bottom: 0.8rem;
+	}
+
+	.avatar {
+		width: 96px;
+		height: 96px;
+		border-radius: 50%;
+		background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+		border: 4px solid #ffffff;
+		box-shadow: 0 8px 20px rgba(99, 102, 241, 0.25);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 2.8rem;
+		user-select: none;
+	}
+
+	.status-badge {
+		position: absolute;
+		bottom: -4px;
+		left: 50%;
+		transform: translateX(-50%);
+		background: #ffffff;
+		padding: 0.25rem 0.65rem;
+		border-radius: 20px;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+		display: flex;
+		align-items: center;
+		gap: 0.35rem;
+		white-space: nowrap;
+	}
+
+	.status-dot {
+		width: 8px;
+		height: 8px;
+		background-color: #10b981;
+		border-radius: 50%;
+		box-shadow: 0 0 8px #10b981;
+		animation: pulse 2s infinite;
+	}
+
+	@keyframes pulse {
+		0%, 100% { opacity: 1; transform: scale(1); }
+		50% { opacity: 0.6; transform: scale(1.15); }
+	}
+
+	.status-text {
+		font-size: 0.72rem;
+		font-weight: 700;
+		color: #475569;
+		letter-spacing: 0.02em;
+	}
+
+	.profile-titles {
+		margin-bottom: 0.8rem;
+	}
+
+	.name {
+		font-size: 1.85rem;
+		font-weight: 800;
+		margin: 0;
+		letter-spacing: -0.02em;
+		background: linear-gradient(135deg, #1e293b, #4338ca);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.handle {
+		font-size: 0.95rem;
+		color: #64748b;
+		margin: 0.1rem 0 0 0;
+		font-weight: 600;
+	}
+
+	.bio-box {
+		background: rgba(248, 250, 252, 0.8);
+		border: 1px solid rgba(226, 232, 240, 0.8);
+		border-radius: 16px;
+		padding: 1rem 1.25rem;
+		margin-bottom: 1.25rem;
+		width: 100%;
+		box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
+	}
+
+	.bio-text {
+		margin: 0;
+		font-size: 1rem;
+		line-height: 1.65;
+		color: #334155;
+		font-weight: 500;
+	}
+
+	.highlight {
+		background: linear-gradient(120deg, rgba(244, 114, 182, 0.25) 0%, rgba(129, 140, 248, 0.25) 100%);
+		padding: 0.1rem 0.4rem;
+		border-radius: 6px;
+		font-weight: 700;
+		color: #4338ca;
+	}
+
+	.hashtags-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 0.5rem;
+		width: 100%;
+	}
+
+	.tag {
+		padding: 0.45rem 0.9rem;
+		border-radius: 20px;
+		font-size: 0.88rem;
+		font-weight: 700;
+		text-decoration: none;
+		transition: all 0.25 ease;
+		display: inline-flex;
+		align-items: center;
+		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+	}
+
+	.tag-hash {
+		opacity: 0.6;
+		margin-right: 2px;
+	}
+
+	.tag-music {
+		background: rgba(238, 242, 255, 0.9);
+		color: #4f46e5;
+		border: 1px solid rgba(199, 210, 254, 0.8);
+	}
+	.tag-music:hover {
+		background: #4f46e5;
+		color: #ffffff;
+		transform: translateY(-2px);
+	}
+
+	.tag-jpop {
+		background: rgba(253, 242, 248, 0.9);
+		color: #db2777;
+		border: 1px solid rgba(251, 207, 232, 0.8);
+	}
+	.tag-jpop:hover {
+		background: #db2777;
+		color: #ffffff;
+		transform: translateY(-2px);
+	}
+
+	.tag-games {
+		background: rgba(240, 253, 244, 0.9);
+		color: #16a34a;
+		border: 1px solid rgba(187, 247, 208, 0.8);
+	}
+	.tag-games:hover {
+		background: #16a34a;
+		color: #ffffff;
+		transform: translateY(-2px);
+	}
+
+	.tag-gadget {
+		background: rgba(255, 247, 237, 0.9);
+		color: #ea580c;
+		border: 1px solid rgba(254, 215, 170, 0.8);
+	}
+	.tag-gadget:hover {
+		background: #ea580c;
+		color: #ffffff;
+		transform: translateY(-2px);
+	}
+
+	/* Section Headings */
+	.section-title {
+		font-size: 1.25rem;
+		font-weight: 800;
+		color: #1e293b;
+		margin-bottom: 1rem;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.title-icon {
+		font-size: 1.2rem;
+	}
+
+	/* Action Link Cards Grid */
+	.link-cards-grid {
+		display: flex;
+		flex-direction: column;
+		gap: 0.9rem;
+	}
+
+	.action-card {
+		display: flex;
+		align-items: center;
+		padding: 1.1rem 1.25rem;
+		background: rgba(255, 255, 255, 0.85);
+		backdrop-filter: blur(12px);
+		-webkit-backdrop-filter: blur(12px);
+		border: 1px solid rgba(255, 255, 255, 0.9);
+		border-radius: 20px;
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+		text-decoration: none;
+		gap: 1.1rem;
+		transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+		position: relative;
+		overflow: hidden;
+	}
+
+	.action-card:hover {
+		transform: translateY(-3px) scale(1.01);
+		box-shadow: 0 12px 25px -5px rgba(99, 102, 241, 0.18);
+		background: rgba(255, 255, 255, 0.95);
+	}
+
+	.card-icon-bg {
+		width: 52px;
+		height: 52px;
+		border-radius: 16px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		transition: transform 0.3s ease;
+	}
+
+	.action-card:hover .card-icon-bg {
+		transform: scale(1.08) rotate(-3deg);
+	}
+
+	.x-icon-bg {
+		background: #0f1419;
+		color: #ffffff;
+		box-shadow: 0 4px 12px rgba(15, 20, 25, 0.25);
+	}
+
+	.suno-icon-bg {
+		background: linear-gradient(135deg, #ff416c, #ff4b2b);
+		color: #ffffff;
+		box-shadow: 0 4px 12px rgba(255, 65, 108, 0.3);
+	}
+
+	.card-info {
+		flex: 1;
+		min-width: 0;
+	}
+
+	.card-header-line {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 0.2rem;
+	}
+
+	.card-title {
+		font-weight: 800;
+		font-size: 1.1rem;
+		color: #0f172a;
+	}
+
+	.arrow-icon {
+		font-size: 1.1rem;
+		font-weight: 700;
+		color: #94a3b8;
+		transition: transform 0.2s ease, color 0.2s ease;
+	}
+
+	.action-card:hover .arrow-icon {
+		transform: translate(2px, -2px);
+		color: #4f46e5;
+	}
+
+	.card-desc {
+		margin: 0 0 0.35rem 0;
+		font-size: 0.88rem;
+		color: #475569;
+		line-height: 1.4;
+	}
+
+	.card-subtext {
+		font-size: 0.78rem;
+		font-weight: 700;
+		color: #6366f1;
+		display: inline-block;
+	}
+
+	/* Interests Grid */
+	.interests-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 0.9rem;
+	}
+
+	.interest-box {
+		background: rgba(255, 255, 255, 0.75);
+		backdrop-filter: blur(10px);
+		border: 1px solid rgba(255, 255, 255, 0.8);
+		border-radius: 20px;
+		padding: 1.1rem 1.2rem;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+		transition: transform 0.25s ease, background 0.25s ease;
+	}
+
+	.interest-box:hover {
+		transform: translateY(-2px);
+		background: rgba(255, 255, 255, 0.92);
+	}
+
+	.box-header {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		margin-bottom: 0.4rem;
+	}
+
+	.box-icon {
+		font-size: 1.3rem;
+	}
+
+	.box-header h3 {
+		font-size: 0.98rem;
+		font-weight: 800;
+		margin: 0;
+		color: #1e293b;
+	}
+
+	.interest-box p {
+		margin: 0;
+		font-size: 0.84rem;
+		color: #64748b;
+		line-height: 1.5;
+	}
+
+	/* Responsive Tweaks */
+	@media (max-width: 580px) {
+		.interests-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.profile-card {
+			border-radius: 24px;
+		}
+
+		.profile-header-content {
+			padding: 0 1rem 1.5rem 1rem;
+		}
+
+		.name {
+			font-size: 1.6rem;
+		}
+
+		.bio-text {
+			font-size: 0.95rem;
+		}
+
+		.action-card {
+			padding: 1rem;
+		}
+
+		.card-icon-bg {
+			width: 46px;
+			height: 46px;
+		}
+	}
+</style>
